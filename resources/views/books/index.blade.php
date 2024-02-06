@@ -2,6 +2,12 @@
 
 @section('page-content')
 <h1>Bookstore</h1>
+<div class="row">
+    <div class="col-lg-12">
+        <p class="text-right">
+            <a href="" class="btn btn-success"><i class="bi bi-plus-circle"></i> Add Book</a>
+    </div>
+</div>
 <table class= "table table-striped">
     <tr>
         <th>Id</th>
