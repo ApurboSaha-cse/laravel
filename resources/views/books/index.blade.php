@@ -14,7 +14,7 @@
         <th>Title</th>
         <th>Author</th> 
         <th>Price</th>
-        <th>Action</th>
+        <th colspan="2">Action</th>
     </tr>
     @foreach($books as $book)
     <tr>
@@ -22,7 +22,8 @@
         <td>{{ $book->title }}</td>
         <td>{{ $book->author }}</td>
         <td>{{ $book->price }}</td>
-        <td><a href="{{route('books.show', $book->id)}}">view</a></td>
+        <td><a href="{{route('books.show', $book->id)}}">View</a></td>
+        <td><a href="{{route('books.edit', $book->id)}}">Edit</a></td>
 
     </tr>
     @endforeach
