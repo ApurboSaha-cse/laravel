@@ -65,7 +65,7 @@ class BookController extends Controller
             'price' => 'required|numeric'
         ];
         $request->validate($rules);
-        
+
         $book = Book::find($request->input('id'));
         $book->title = $request->input('title');
         $book->author = $request->input('author');
@@ -74,6 +74,13 @@ class BookController extends Controller
         $book->price = $request->input('price');
         $book->save();
         return redirect()->route('books.show', $book->id);
+    }
+
+    public function destroy(Request $request)
+    {
+        $book = Book::find($request->input('id'));
+        $book->delete();
+        return redirect()->route('books.index');
     }
     
 }
